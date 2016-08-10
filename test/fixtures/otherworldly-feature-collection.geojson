@@ -1,0 +1,109 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -487.96875,
+            15.284185114076445
+          ],
+          [
+            147.65625,
+            15.284185114076445
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -354.37499999999994,
+              73.22669969306126
+            ],
+            [
+              -369.84374999999994,
+              49.83798245308484
+            ],
+            [
+              -272.8125,
+              45.089035564831015
+            ],
+            [
+              -354.37499999999994,
+              73.22669969306126
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              163.125,
+              58.07787626787517
+            ],
+            [
+              28.125,
+              -17.97873309555617
+            ],
+            [
+              237.65625,
+              -47.04018214480664
+            ],
+            [
+              163.125,
+              58.07787626787517
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.53125,
+          48.922499263758255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.5,
+          -17.97873309555617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -382.5,
+          0
+        ]
+      }
+    }
+  ]
+}

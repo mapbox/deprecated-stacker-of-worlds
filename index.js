@@ -32,6 +32,14 @@ function createWorld(worldNumber) {
 }
 
 function stackMultiWorldFeature(feature) {
+  if (feature.type === 'FeatureCollection') {
+    return Object.assign({}, feature, {
+      features: feature.features.reduce(function(result, subFeature) {
+        return result.concat(stackMultiWorldFeature(subFeature));
+      }, []),
+    });
+  }
+
   const bbox = turf.bbox(feature);
   const rangeOfWorlds = [Math.floor(bbox[0] / 360), Math.ceil(bbox[2] / 360)];
 
