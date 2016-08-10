@@ -1,0 +1,33 @@
+{
+  "name": "stacker-of-worlds",
+  "version": "0.1.0",
+  "description": "Stack a GeoJSON FeatureCollection spanning multiple worlds onto the One True World",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "tap test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/stacker-of-worlds.git"
+  },
+  "keywords": [
+    "geojson",
+    "gis",
+    "map"
+  ],
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/stacker-of-worlds/issues"
+  },
+  "homepage": "https://github.com/mapbox/stacker-of-worlds#readme",
+  "dependencies": {
+    "turf": "^3.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^3.2.2",
+    "eslint-plugin-node": "^2.0.0",
+    "tap": "^6.3.0"
+  }
+}
