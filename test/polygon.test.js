@@ -3,101 +3,6 @@
 const test = require('tap').test;
 const stackerOfWorlds = require('..');
 
-test('multiworld LineString', function(assert) {
-  assert.deepEqual(stackerOfWorlds({
-    type: 'Feature',
-    properties: { id: 'aaa' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [-69.60937499999999, -53.330872983017045],
-        [150.46875, -27.68352808378776],
-        [403.59375, 24.206889622398023],
-        [648.984375, 51.6180165487737],
-        [930.9375, 65.6582745198266],
-      ],
-    },
-  }), {
-    type: 'Feature',
-    properties: { id: 'aaa' },
-    geometry: {
-      type: 'MultiLineString',
-      coordinates: [
-        [
-          [-69.60937499999999, -53.330872983017045],
-          [150.46875, -27.68352808378776],
-          [180, -21.629646018066083],
-        ],
-        [
-          [-180, -21.629646018066083],
-          [43.59375, 24.206889622398023],
-          [180, 39.444020349380494],
-        ],
-        [
-          [-180, 39.444020349380494],
-          [-71.015625, 51.6180165487737],
-          [180, 64.11769758534699],
-        ],
-        [
-          [-180, 64.11769758534699],
-          [-149.0625, 65.6582745198266],
-        ],
-      ],
-    },
-  }, 'returns stacked MultiLineString');
-  assert.end();
-});
-
-test('real world LineString', function(assert) {
-  assert.deepEqual(stackerOfWorlds({
-    type: 'Feature',
-    properties: { id: 'bbb' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [-14.0625, 13.923403897723347],
-        [33.75, 15.284185114076445],
-      ],
-    },
-  }), {
-    type: 'Feature',
-    properties: { id: 'bbb' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [-14.0625, 13.923403897723347],
-        [33.75, 15.284185114076445],
-      ],
-    },
-  }, 'returns unchanged');
-  assert.end();
-});
-
-test('otherworldly LineString', function(assert) {
-  assert.deepEqual(stackerOfWorlds({
-    type: 'Feature',
-    properties: { id: 'ccc' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [348.75, 43.068887774169625],
-        [405, 43.068887774169625],
-      ],
-    },
-  }), {
-    type: 'Feature',
-    properties: { id: 'ccc' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [-11.25, 43.068887774169625],
-        [45, 43.068887774169625],
-      ],
-    },
-  }, 'shifted to world one');
-  assert.end();
-});
-
 test('multiworld Polygon', function(assert) {
   assert.deepEqual(stackerOfWorlds({
     type: 'Feature',
@@ -176,7 +81,7 @@ test('multiworld Polygon', function(assert) {
   assert.end();
 });
 
-test('real world Polygon drawn counterclockwise', function(assert) {
+test('real-world Polygon drawn counterclockwise', function(assert) {
   assert.deepEqual(stackerOfWorlds({
     type: 'Feature',
     properties: {},
@@ -231,5 +136,92 @@ test('otherworldly Polygon', function(assert) {
       ]],
     },
   }, 'returns unchanged except redirected clockwise');
+  assert.end();
+});
+
+test('MultiPolygon', function(assert) {
+  assert.deepEqual(stackerOfWorlds({
+    type: 'Feature',
+    properties: {},
+    geometry: {
+      type: 'MultiPolygon',
+      coordinates: [
+        [
+          [
+            [-113.90625, 54.97761367069628],
+            [-127.96875, 28.92163128242129],
+            [-92.10937499999999, 28.92163128242129],
+            [-113.90625, 54.97761367069628],
+          ],
+        ],
+        [
+          [
+            [291.09375, -22.593726063929296],
+            [296.015625, -53.330872983017045],
+            [320.625, -9.10209673872643],
+            [291.09375, -22.593726063929296],
+          ],
+        ],
+        [
+          [
+            [-340.3125, -27.68352808378776],
+            [2.8125, 5.61598581915534],
+            [251.015625, 46.07323062540838],
+            [-340.3125, -27.68352808378776],
+          ],
+        ],
+      ],
+    },
+  }), {
+    type: 'Feature',
+    properties: {},
+    geometry: {
+      type: 'MultiPolygon',
+      coordinates: [
+        [
+          [
+            [180, -12.125558473396314],
+            [19.6875, -27.68352808378776],
+            [180, -7.687641061556226],
+            [180, -12.125558473396314],
+          ],
+        ],
+        [
+          [
+            [-113.90625, 54.97761367069628],
+            [-92.10937499999999, 28.92163128242129],
+            [-127.96875, 28.92163128242129],
+            [-113.90625, 54.97761367069628],
+          ],
+        ],
+        [
+          [
+            [180, 34.497645000956375],
+            [2.8125, 5.61598581915534],
+            [-180, -12.125558473396314],
+            [-180, -7.687641061556226],
+            [180, 37.21540347959529],
+            [180, 34.497645000956375],
+          ],
+        ],
+        [
+          [
+            [-68.90625, -22.593726063929296],
+            [-39.375, -9.10209673872643],
+            [-63.984375, -53.330872983017045],
+            [-68.90625, -22.593726063929296],
+          ],
+        ],
+        [
+          [
+            [-180, 37.21540347959529],
+            [-108.984375, 46.07323062540838],
+            [-180, 34.497645000956375],
+            [-180, 37.21540347959529],
+          ],
+        ],
+      ],
+    },
+  });
   assert.end();
 });
