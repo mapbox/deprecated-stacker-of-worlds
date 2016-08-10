@@ -14,17 +14,18 @@ test('real-world Point', function(assert) {
       type: 'Point',
       coordinates: [10, 40],
     },
-  }), {
-    type: 'Feature',
-    properties: {
-      id: 'fire',
-      type: 'extinguisher',
+  }), [
+    {
+      type: 'Feature',
+      properties: {
+        type: 'extinguisher',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [10, 40],
+      },
     },
-    geometry: {
-      type: 'Point',
-      coordinates: [10, 40],
-    },
-  }, 'returns unchanged');
+  ], 'returns unchanged');
   assert.end();
 });
 
@@ -39,17 +40,18 @@ test('otherworldly Point', function(assert) {
       type: 'Point',
       coordinates: [340, 40],
     },
-  }), {
-    type: 'Feature',
-    properties: {
-      id: 'fire',
-      type: 'extinguisher',
+  }), [
+    {
+      type: 'Feature',
+      properties: {
+        type: 'extinguisher',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [-20, 40],
+      },
     },
-    geometry: {
-      type: 'Point',
-      coordinates: [-20, 40],
-    },
-  }, 'returns unchanged');
+  ], 'returns unchanged');
   assert.end();
 });
 
@@ -68,20 +70,37 @@ test('MultiPoint', function(assert) {
         [0, -20],
       ],
     },
-  }), {
-    type: 'Feature',
-    properties: {
-      id: 'fire',
-      type: 'extinguisher',
+  }), [
+    {
+      type: 'Feature',
+      properties: {
+        type: 'extinguisher',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [20, 10],
+      },
     },
-    geometry: {
-      type: 'MultiPoint',
-      coordinates: [
-        [20, 10],
-        [0, -20],
-        [-104, 20],
-      ],
+    {
+      type: 'Feature',
+      properties: {
+        type: 'extinguisher',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [0, -20],
+      },
     },
-  }, 'returns unchanged');
+    {
+      type: 'Feature',
+      properties: {
+        type: 'extinguisher',
+      },
+      geometry: {
+        type: 'Point',
+        coordinates: [-104, 20],
+      },
+    },
+  ], 'returns one feature per world');
   assert.end();
 });

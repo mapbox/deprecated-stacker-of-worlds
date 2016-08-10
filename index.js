@@ -3,11 +3,11 @@
 const turf = require('turf');
 
 const realWorldOutline = [
-  [-180, 90],
-  [180, 90],
-  [180, -90],
-  [-180, -90],
-  [-180, 90],
+  [-179, 90],
+  [181, 90],
+  [181, -90],
+  [-179, -90],
+  [-179, 90],
 ];
 
 const worldCache = {};
@@ -34,9 +34,8 @@ function createWorld(worldNumber) {
 function stackMultiWorldFeature(feature) {
   const bbox = turf.bbox(feature);
   const rangeOfWorlds = [Math.floor(bbox[0] / 360), Math.ceil(bbox[2] / 360)];
-  const featureIsMultiFeature = isMultiFeature(feature);
 
-  const stackedCoordinates = [];
+  const stackedFeatures = [];
   for (let worldNumber = rangeOfWorlds[0]; worldNumber <= rangeOfWorlds[1]; worldNumber++) {
     const world = createWorld(worldNumber);
     const intersection = turf.intersect(feature, world);
@@ -46,33 +45,18 @@ function stackMultiWorldFeature(feature) {
     const oneWorldCoordinates = transformCoordinates(intersection.geometry.coordinates, function(lngLat) {
       return [lngLat[0] + lngOffset, lngLat[1]];
     });
-    if (isMultiFeature(intersection)) {
-      oneWorldCoordinates.forEach(coordinates => stackedCoordinates.push(coordinates));
-    } else {
-      stackedCoordinates.push(oneWorldCoordinates);
-    }
-  }
-
-  if (stackedCoordinates.length === 1) {
-    return Object.assign({}, feature, {
-      geometry: Object.assign({}, feature.geometry, {
-        coordinates: stackedCoordinates[0],
+    const newFeature = Object.assign({}, intersection, {
+      properties: feature.properties,
+      geometry: Object.assign({}, intersection.geometry, {
+        coordinates: oneWorldCoordinates,
       }),
     });
+    delete newFeature.properties.id;
+
+    stackedFeatures.push(newFeature);
   }
 
-  const newFeatureType = (featureIsMultiFeature)
-    ? feature.geometry.type
-    : `Multi${feature.geometry.type}`;
-
-  return {
-    type: 'Feature',
-    properties: feature.properties,
-    geometry: {
-      type: newFeatureType,
-      coordinates: stackedCoordinates,
-    },
-  };
+  return stackedFeatures;
 }
 
 function transformCoordinates(coordinates, transform) {
@@ -80,10 +64,6 @@ function transformCoordinates(coordinates, transform) {
     return coordinates.map(subValue => transformCoordinates(subValue.slice(), transform));
   }
   return transform(coordinates.slice());
-}
-
-function isMultiFeature(feature) {
-  return feature.geometry.type.indexOf('Multi') === 0;
 }
 
 module.exports = stackMultiWorldFeature;

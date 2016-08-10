@@ -17,34 +17,55 @@ test('multiworld LineString', function(assert) {
         [930.9375, 65.6582745198266],
       ],
     },
-  }), {
-    type: 'Feature',
-    properties: { id: 'aaa' },
-    geometry: {
-      type: 'MultiLineString',
-      coordinates: [
-        [
+  }), [
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
           [-69.60937499999999, -53.330872983017045],
           [150.46875, -27.68352808378776],
-          [180, -21.629646018066083],
+          [181, -21.424646837004616],
         ],
-        [
-          [-180, -21.629646018066083],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-179, -21.424646837004616],
           [43.59375, 24.206889622398023],
-          [180, 39.444020349380494],
+          [181, 39.555724400529044],
         ],
-        [
-          [-180, 39.444020349380494],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-179, 39.555724400529044],
           [-71.015625, 51.6180165487737],
-          [180, 64.11769758534699],
+          [181, 64.16749401151199],
         ],
-        [
-          [-180, 64.11769758534699],
+      },
+    },
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-179, 64.16749401151199],
           [-149.0625, 65.6582745198266],
         ],
-      ],
+      },
     },
-  }, 'returns stacked MultiLineString');
+  ], 'returns one feature per world');
   assert.end();
 });
 
@@ -59,17 +80,19 @@ test('real-world LineString', function(assert) {
         [33.75, 15.284185114076445],
       ],
     },
-  }), {
-    type: 'Feature',
-    properties: { id: 'bbb' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [-14.0625, 13.923403897723347],
-        [33.75, 15.284185114076445],
-      ],
+  }), [
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-14.0625, 13.923403897723347],
+          [33.75, 15.284185114076445],
+        ],
+      },
     },
-  }, 'returns unchanged');
+  ], 'returns unchanged');
   assert.end();
 });
 
@@ -84,17 +107,19 @@ test('otherworldly LineString', function(assert) {
         [405, 43.068887774169625],
       ],
     },
-  }), {
-    type: 'Feature',
-    properties: { id: 'ccc' },
-    geometry: {
-      type: 'LineString',
-      coordinates: [
-        [-11.25, 43.068887774169625],
-        [45, 43.068887774169625],
-      ],
+  }), [
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-11.25, 43.068887774169625],
+          [45, 43.068887774169625],
+        ],
+      },
     },
-  }, 'shifted to world one');
+  ], 'shifted to world one');
   assert.end();
 });
 
@@ -110,19 +135,50 @@ test('MultiLineString', function(assert) {
         [[-200, -40], [400, 42]],
       ],
     },
-  }), {
-    type: 'Feature',
-    properties: { id: 'foo' },
-    geometry: {
-      type: 'MultiLineString',
-      coordinates: [
-        [[-30, 30], [-60, 40]],
-        [[160, -40], [180, -37.266666666666666]],
-        [[0, 0], [100, 10]],
-        [[-180, -37.266666666666666], [180, 11.933333333333334]],
-        [[-180, 11.933333333333334], [40, 42]],
-      ],
+  }), [
+    {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'MultiLineString',
+        coordinates: [
+          [
+            [-30, 30],
+            [-60, 40],
+          ],
+          [
+            [160, -40],
+            [181, -37.13],
+          ],
+        ],
+      },
+    }, {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'MultiLineString',
+        coordinates: [
+          [
+            [0, 0],
+            [100, 10],
+          ],
+          [
+            [-179, -37.13],
+            [181, 12.07],
+          ],
+        ],
+      },
+    }, {
+      type: 'Feature',
+      properties: {},
+      geometry: {
+        type: 'LineString',
+        coordinates: [
+          [-179, 12.07],
+          [40, 42],
+        ],
+      },
     },
-  });
+  ], 'returns one feature per world');
   assert.end();
 });
