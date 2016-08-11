@@ -3,11 +3,11 @@
 const turf = require('turf');
 
 const realWorldOutline = [
-  [-179, 90],
+  [-181, 90],
   [181, 90],
   [181, -90],
-  [-179, -90],
-  [-179, 90],
+  [-181, -90],
+  [-181, 90],
 ];
 
 const worldCache = {};

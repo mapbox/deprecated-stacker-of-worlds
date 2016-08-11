@@ -36,7 +36,7 @@ test('multiworld LineString', function(assert) {
       geometry: {
         type: 'LineString',
         coordinates: [
-          [-179, -21.424646837004616],
+          [-181, -21.834645199127564],
           [43.59375, 24.206889622398023],
           [181, 39.555724400529044],
         ],
@@ -48,7 +48,7 @@ test('multiworld LineString', function(assert) {
       geometry: {
         type: 'LineString',
         coordinates: [
-          [-179, 39.555724400529044],
+          [-181, 39.33231629823194],
           [-71.015625, 51.6180165487737],
           [181, 64.16749401151199],
         ],
@@ -60,7 +60,7 @@ test('multiworld LineString', function(assert) {
       geometry: {
         type: 'LineString',
         coordinates: [
-          [-179, 64.16749401151199],
+          [-181, 64.06790115918199],
           [-149.0625, 65.6582745198266],
         ],
       },
@@ -163,7 +163,7 @@ test('MultiLineString', function(assert) {
             [100, 10],
           ],
           [
-            [-179, -37.13],
+            [-181, -37.403333333333336],
             [181, 12.07],
           ],
         ],
@@ -174,7 +174,7 @@ test('MultiLineString', function(assert) {
       geometry: {
         type: 'LineString',
         coordinates: [
-          [-179, 12.07],
+          [-181, 11.796666666666667],
           [40, 42],
         ],
       },
