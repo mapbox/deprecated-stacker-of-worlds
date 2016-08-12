@@ -130,7 +130,7 @@ test('real-world Polygon drawn counterclockwise', function(assert) {
       ]],
     },
   }), [
-      {
+    {
       type: 'Feature',
       properties: {},
       geometry: {
@@ -161,7 +161,7 @@ test('otherworldly Polygon', function(assert) {
       ]],
     },
   }), [
-      {
+    {
       type: 'Feature',
       properties: {},
       geometry: {

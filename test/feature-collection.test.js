@@ -14,6 +14,8 @@ test('multiworld FeatureCollection', function(assert) {
   const actual = stackerOfWorlds(input);
   const expected = fixture('oneworld-feature-collection.geojson');
 
+  console.log(JSON.stringify(actual, null, 2))
+
   assert.deepEqual(actual, expected, 'correct output');
   assert.end();
 });

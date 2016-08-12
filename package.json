@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/mapbox/stacker-of-worlds#readme",
   "dependencies": {
+    "sphericalmercator": "^1.0.5",
     "turf": "^3.0.14"
   },
   "devDependencies": {
