@@ -1,0 +1,10 @@
+{
+  "type": "Feature",
+  "properties": {
+    "foo": "BARBAR"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [30, 40]
+  }
+}

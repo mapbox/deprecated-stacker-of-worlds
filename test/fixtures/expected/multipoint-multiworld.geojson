@@ -1,0 +1,19 @@
+{
+  "type": "Feature",
+  "properties": {
+    "foo": "hoola hoop"
+  },
+  "geometry": {
+    "type": "MultiPoint",
+    "coordinates": [
+      [
+        30,
+        40
+      ],
+      [
+        -29.999999999999943,
+        40
+      ]
+    ]
+  }
+}

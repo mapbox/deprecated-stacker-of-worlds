@@ -1,0 +1,27 @@
+{
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -1000,
+          50
+        ],
+        [
+          55,
+          -52
+        ],
+        [
+          820,
+          -1
+        ],
+        [
+          -1000,
+          50
+        ]
+      ]
+    ]
+  }
+}
