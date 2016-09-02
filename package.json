@@ -1,7 +1,7 @@
 {
   "name": "stacker-of-worlds",
   "version": "0.1.0",
-  "description": "Stack a GeoJSON FeatureCollection spanning multiple worlds onto the One True World",
+  "description": "Stack GeoJSON spanning multiple worlds onto the One True World",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js lib test",

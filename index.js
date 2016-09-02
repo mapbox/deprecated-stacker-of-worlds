@@ -33,10 +33,25 @@ function createProjectedWorld(worldNumber) {
   return world;
 }
 
-function stackMultiWorldFeature(feature) {
+function transformCoordinates(coordinates, transform) {
+  if (Array.isArray(coordinates[0])) {
+    return coordinates.map((subValue) => transformCoordinates(subValue.slice(), transform));
+  }
+  return transform(coordinates.slice());
+}
+
+function swapCoordinates(feature, newCoordinates) {
+  return Object.assign({}, feature, {
+    geometry: Object.assign({}, feature.geometry, {
+      coordinates: newCoordinates,
+    }),
+  });
+}
+
+function stack(feature) {
   if (feature.type === 'FeatureCollection') {
     return Object.assign({}, feature, {
-      features: feature.features.map(stackMultiWorldFeature),
+      features: feature.features.map(stack),
     });
   }
 
@@ -82,19 +97,4 @@ function stackMultiWorldFeature(feature) {
   });
 }
 
-function transformCoordinates(coordinates, transform) {
-  if (Array.isArray(coordinates[0])) {
-    return coordinates.map((subValue) => transformCoordinates(subValue.slice(), transform));
-  }
-  return transform(coordinates.slice());
-}
-
-function swapCoordinates(feature, newCoordinates) {
-  return Object.assign({}, feature, {
-    geometry: Object.assign({}, feature.geometry, {
-      coordinates: newCoordinates,
-    }),
-  });
-}
-
-module.exports = stackMultiWorldFeature;
+module.exports = { stack };

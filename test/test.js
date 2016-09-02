@@ -13,7 +13,7 @@ srcFixtures.forEach((filename) => {
   const getActual = new Promise((resolve, reject) => {
     fs.readFile(path.join(srcDir, filename), 'utf8', (err, geojson) => {
       if (err) return reject(err);
-      resolve(stackerOfWorlds(JSON.parse(geojson)));
+      resolve(stackerOfWorlds.stack(JSON.parse(geojson)));
     });
   });
 
