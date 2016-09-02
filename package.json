@@ -1,11 +1,11 @@
 {
   "name": "stacker-of-worlds",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Stack GeoJSON spanning multiple worlds onto the One True World",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js lib test",
-    "tap": "tap test/*.js",
+    "lint": "eslint index.js lib test bin",
+    "tap": "tap test/*.test.js",
     "test": "npm run lint && npm run tap"
   },
   "repository": {
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/mapbox/stacker-of-worlds#readme",
   "dependencies": {
+    "get-stdin": "^5.0.1",
+    "meow": "^3.7.0",
     "turf": "^3.0.14"
   },
   "devDependencies": {

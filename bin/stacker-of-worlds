@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+'use strict';
+/* eslint-disable no-console */
+
+const meow = require('meow');
+const fs = require('fs');
+const getStdin = require('get-stdin');
+const stack = require('../lib/stack');
+
+const help = `
+  Usage
+    stacker-of-worlds <input> <output> <options>
+
+    If no input is provided, stdin is used.
+    If no output is provided, stdout is used.
+
+  Options
+    --pretty, -p    Write JSON within line breaks and indentation.
+
+  Example
+    stacker-of-worlds ./foo.geojson ./stacked/stacked-foo.geojson --pretty
+  `;
+
+const cli = meow(help, {
+  alias: {
+    p: 'pretty',
+  },
+});
+
+const inputFilepath = cli.input[0];
+const outputFilepath = cli.input[1];
+
+if (inputFilepath) {
+  fs.readFile(inputFilepath, (err, data) => {
+    if (err) throw err;
+    writeOutput(stack(JSON.parse(data)));
+  });
+} else {
+  getStdin().then((data) => {
+    if (!data) throw new Error('No input provided');
+    writeOutput(stack(JSON.parse(data)));
+  }).catch((err) => {
+    console.error(err.stack);
+  });
+}
+
+function writeOutput(output) {
+  const outputString = (cli.flags.pretty)
+    ? JSON.stringify(output, null, 2)
+    : JSON.stringify(output);
+
+  if (outputFilepath) {
+    fs.writeFileSync(outputFilepath, outputString);
+  } else {
+    console.log(outputString);
+  }
+}
