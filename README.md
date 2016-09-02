@@ -24,7 +24,7 @@ Usage
   If no output is provided, stdout is used.
 
 Options
-  --pretty, -p    Write JSON within line breaks and indentation.
+  --pretty, -p    Write JSON with line breaks and indentation.
 
 Example
   stacker-of-worlds ./foo.geojson ./stacked/stacked-foo.geojson --pretty
