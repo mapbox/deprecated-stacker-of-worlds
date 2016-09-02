@@ -26,8 +26,10 @@ Usage
 Options
   --pretty, -p    Write JSON with line breaks and indentation.
 
-Example
+Examples
   stacker-of-worlds ./foo.geojson ./stacked/stacked-foo.geojson --pretty
+  stacker-of-worlds ./foo.geojson > ./stacked/stacked-foo.geojson
+  cat ./foo.geojson | stacker-of-worlds --pretty | some-other-tool
 ```
 
 ### Node
