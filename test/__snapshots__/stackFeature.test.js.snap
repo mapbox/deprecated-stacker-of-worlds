@@ -1,0 +1,965 @@
+exports[`stackFeature featurecollection-multiworld 1`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              Array [
+                180,
+                67.18620619898901,
+              ],
+              Array [
+                179.8297119140625,
+                67.28053044353817,
+              ],
+              Array [
+                180,
+                67.33770521826514,
+              ],
+              Array [
+                180,
+                67.18620619898901,
+              ],
+            ],
+          ],
+          Array [
+            Array [
+              Array [
+                180,
+                67.9871533943935,
+              ],
+              Array [
+                179.439697265625,
+                67.96227048518728,
+              ],
+              Array [
+                179.4287109375,
+                68.17972379832914,
+              ],
+              Array [
+                180,
+                68.05806179295108,
+              ],
+              Array [
+                180,
+                67.9871533943935,
+              ],
+            ],
+          ],
+          Array [
+            Array [
+              Array [
+                180,
+                67.72896346207641,
+              ],
+              Array [
+                179.6484375,
+                67.69277095059344,
+              ],
+              Array [
+                179.58251953125,
+                67.87554134672943,
+              ],
+              Array [
+                180,
+                67.8237630400101,
+              ],
+              Array [
+                180,
+                67.72896346207641,
+              ],
+            ],
+          ],
+          Array [
+            Array [
+              Array [
+                -180,
+                67.33770521826514,
+              ],
+              Array [
+                -179.8736572265625,
+                67.38003710805398,
+              ],
+              Array [
+                -179.89013671875,
+                67.12515524355918,
+              ],
+              Array [
+                -180,
+                67.18620619898901,
+              ],
+              Array [
+                -180,
+                67.33770521826514,
+              ],
+            ],
+          ],
+          Array [
+            Array [
+              Array [
+                -180,
+                68.05806179295108,
+              ],
+              Array [
+                -179.72534179687503,
+                67.99934114512352,
+              ],
+              Array [
+                -180,
+                67.9871533943935,
+              ],
+              Array [
+                -180,
+                68.05806179295108,
+              ],
+            ],
+          ],
+          Array [
+            Array [
+              Array [
+                -180,
+                67.8237630400101,
+              ],
+              Array [
+                -179.58251953124997,
+                67.77186968146705,
+              ],
+              Array [
+                -180,
+                67.72896346207641,
+              ],
+              Array [
+                -180,
+                67.8237630400101,
+              ],
+            ],
+          ],
+        ],
+        "type": "MultiPolygon",
+      },
+      "properties": Object {},
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              -69.60937499999999,
+              -53.330872983017066,
+            ],
+            Array [
+              150.46875,
+              -27.68352808378776,
+            ],
+            Array [
+              180,
+              -21.991951190715152,
+            ],
+          ],
+          Array [
+            Array [
+              -180,
+              -21.991951190715152,
+            ],
+            Array [
+              43.59375,
+              24.206889622398023,
+            ],
+            Array [
+              180,
+              40.75212192228057,
+            ],
+          ],
+          Array [
+            Array [
+              -180,
+              40.75212192228057,
+            ],
+            Array [
+              -71.015625,
+              51.6180165487737,
+            ],
+            Array [
+              180,
+              64.3880331727298,
+            ],
+          ],
+          Array [
+            Array [
+              -180,
+              64.3880331727298,
+            ],
+            Array [
+              -149.0625,
+              65.65827451982659,
+            ],
+          ],
+        ],
+        "type": "MultiLineString",
+      },
+      "properties": Object {
+        "id": "aaa",
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`;
+
+exports[`stackFeature line-multiworld-large 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          -69.60937499999999,
+          -53.330872983017066,
+        ],
+        Array [
+          150.46875,
+          -27.68352808378776,
+        ],
+        Array [
+          180,
+          -21.991951190715152,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          -21.991951190715152,
+        ],
+        Array [
+          43.59375,
+          24.206889622398023,
+        ],
+        Array [
+          180,
+          40.75212192228057,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          40.75212192228057,
+        ],
+        Array [
+          -71.015625,
+          51.6180165487737,
+        ],
+        Array [
+          180,
+          64.3880331727298,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          64.3880331727298,
+        ],
+        Array [
+          -149.0625,
+          65.65827451982659,
+        ],
+      ],
+    ],
+    "type": "MultiLineString",
+  },
+  "properties": Object {
+    "id": "aaa",
+  },
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature line-multiworld-small 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          179.98912223535154,
+          66.91603758604462,
+        ],
+        Array [
+          179.9889505739746,
+          66.91472510463917,
+        ],
+        Array [
+          179.9899805422363,
+          66.91398469939355,
+        ],
+        Array [
+          179.9940145845947,
+          66.91368179986871,
+        ],
+        Array [
+          179.99753364282225,
+          66.91408566506702,
+        ],
+        Array [
+          180,
+          66.91383769311147,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          66.91383769311147,
+        ],
+        Array [
+          -179.99911896032717,
+          66.91374911119888,
+        ],
+        Array [
+          -179.98555771154787,
+          66.91455683269075,
+        ],
+      ],
+    ],
+    "type": "MultiLineString",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature line-otherworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        -32.79052734375,
+        63.361982464431236,
+      ],
+      Array [
+        -31.99951171875,
+        63.06491420208559,
+      ],
+      Array [
+        -31.56005859375,
+        62.85514553774181,
+      ],
+    ],
+    "type": "LineString",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature line-realworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        87.20947265625,
+        63.361982464431236,
+      ],
+      Array [
+        88.00048828124999,
+        63.06491420208559,
+      ],
+      Array [
+        88.43994140625,
+        62.85514553774182,
+      ],
+    ],
+    "type": "LineString",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature multiline-multiworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          -69.60937499999999,
+          -53.330872983017066,
+        ],
+        Array [
+          150.46875,
+          -27.68352808378776,
+        ],
+        Array [
+          180,
+          -21.991951190715152,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          -21.991951190715152,
+        ],
+        Array [
+          43.59375,
+          24.206889622398023,
+        ],
+        Array [
+          180,
+          40.75212192228057,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          40.75212192228057,
+        ],
+        Array [
+          -71.015625,
+          51.6180165487737,
+        ],
+        Array [
+          180,
+          64.3880331727298,
+        ],
+      ],
+      Array [
+        Array [
+          -180,
+          64.3880331727298,
+        ],
+        Array [
+          -149.0625,
+          65.65827451982659,
+        ],
+      ],
+    ],
+    "type": "MultiLineString",
+  },
+  "properties": Object {
+    "id": "aaa",
+  },
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature multipoint-multiworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        30,
+        40,
+      ],
+      Array [
+        -29.999999999999943,
+        40,
+      ],
+    ],
+    "type": "MultiPoint",
+  },
+  "properties": Object {
+    "foo": "hoola hoop",
+  },
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature multipolygon-multiworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          Array [
+            180,
+            67.18620619898901,
+          ],
+          Array [
+            179.8297119140625,
+            67.28053044353817,
+          ],
+          Array [
+            180,
+            67.33770521826514,
+          ],
+          Array [
+            180,
+            67.18620619898901,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            180,
+            67.9871533943935,
+          ],
+          Array [
+            179.439697265625,
+            67.96227048518728,
+          ],
+          Array [
+            179.4287109375,
+            68.17972379832914,
+          ],
+          Array [
+            180,
+            68.05806179295108,
+          ],
+          Array [
+            180,
+            67.9871533943935,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            180,
+            67.72896346207641,
+          ],
+          Array [
+            179.6484375,
+            67.69277095059344,
+          ],
+          Array [
+            179.58251953125,
+            67.87554134672943,
+          ],
+          Array [
+            180,
+            67.8237630400101,
+          ],
+          Array [
+            180,
+            67.72896346207641,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            -180,
+            67.33770521826514,
+          ],
+          Array [
+            -179.8736572265625,
+            67.38003710805398,
+          ],
+          Array [
+            -179.89013671875,
+            67.12515524355918,
+          ],
+          Array [
+            -180,
+            67.18620619898901,
+          ],
+          Array [
+            -180,
+            67.33770521826514,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            -180,
+            68.05806179295108,
+          ],
+          Array [
+            -179.72534179687503,
+            67.99934114512352,
+          ],
+          Array [
+            -180,
+            67.9871533943935,
+          ],
+          Array [
+            -180,
+            68.05806179295108,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            -180,
+            67.8237630400101,
+          ],
+          Array [
+            -179.58251953124997,
+            67.77186968146705,
+          ],
+          Array [
+            -180,
+            67.72896346207641,
+          ],
+          Array [
+            -180,
+            67.8237630400101,
+          ],
+        ],
+      ],
+    ],
+    "type": "MultiPolygon",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature point-otherworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      -29.999999999999943,
+      40,
+    ],
+    "type": "Point",
+  },
+  "properties": Object {
+    "foo": "BARBAR",
+  },
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature point-realworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      30,
+      40,
+    ],
+    "type": "Point",
+  },
+  "properties": Object {
+    "foo": "BARBAR",
+  },
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature polygon-multiworld-huge 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          Array [
+            180,
+            42.19805055830878,
+          ],
+          Array [
+            80,
+            49.99999999999998,
+          ],
+          Array [
+            180,
+            47.87429905013776,
+          ],
+          Array [
+            180,
+            42.19805055830878,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            180,
+            6.012978206087834,
+          ],
+          Array [
+            -180,
+            42.19805055830878,
+          ],
+          Array [
+            -180,
+            47.87429905013776,
+          ],
+          Array [
+            180,
+            39.46750215403718,
+          ],
+          Array [
+            180,
+            6.012978206087834,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            180,
+            -32.65428339744882,
+          ],
+          Array [
+            -180,
+            6.012978206087834,
+          ],
+          Array [
+            -180,
+            39.46750215403718,
+          ],
+          Array [
+            180,
+            29.908177122476598,
+          ],
+          Array [
+            180,
+            -32.65428339744882,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            180,
+            -45.54155014373475,
+          ],
+          Array [
+            55,
+            -52,
+          ],
+          Array [
+            -180,
+            -32.65428339744882,
+          ],
+          Array [
+            -180,
+            29.908177122476598,
+          ],
+          Array [
+            180,
+            19.336930228519932,
+          ],
+          Array [
+            180,
+            -45.54155014373475,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            180,
+            -22.39912986926736,
+          ],
+          Array [
+            -180,
+            -45.54155014373475,
+          ],
+          Array [
+            -180,
+            19.336930228519932,
+          ],
+          Array [
+            180,
+            8.036228878463266,
+          ],
+          Array [
+            180,
+            -22.39912986926736,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            -180,
+            8.036228878463266,
+          ],
+          Array [
+            100.00000000000011,
+            -1.0000000000000142,
+          ],
+          Array [
+            -180,
+            -22.39912986926736,
+          ],
+          Array [
+            -180,
+            8.036228878463266,
+          ],
+        ],
+      ],
+    ],
+    "type": "MultiPolygon",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature polygon-multiworld-large 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          Array [
+            180,
+            -40.039921711020476,
+          ],
+          Array [
+            28.125,
+            -17.978733095556183,
+          ],
+          Array [
+            163.125,
+            58.07787626787517,
+          ],
+          Array [
+            180,
+            39.746724281764386,
+          ],
+          Array [
+            180,
+            -40.039921711020476,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            -180,
+            39.746724281764386,
+          ],
+          Array [
+            -122.34375,
+            -47.04018214480664,
+          ],
+          Array [
+            -180,
+            -40.039921711020476,
+          ],
+          Array [
+            -180,
+            39.746724281764386,
+          ],
+        ],
+      ],
+    ],
+    "type": "MultiPolygon",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature polygon-multiworld-small 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          Array [
+            180,
+            66.91428599079396,
+          ],
+          Array [
+            179.98978801210893,
+            66.91402956286723,
+          ],
+          Array [
+            179.98966543941947,
+            66.91845088566373,
+          ],
+          Array [
+            180,
+            66.91688184479307,
+          ],
+          Array [
+            180,
+            66.91428599079396,
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          Array [
+            -180,
+            66.91688184479307,
+          ],
+          Array [
+            -179.9853297319048,
+            66.91465436356832,
+          ],
+          Array [
+            -180,
+            66.91428599079396,
+          ],
+          Array [
+            -180,
+            66.91688184479307,
+          ],
+        ],
+      ],
+    ],
+    "type": "MultiPolygon",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature polygon-otherworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          80.00000000000011,
+          49.99999999999998,
+        ],
+        Array [
+          110,
+          29.99999999999998,
+        ],
+        Array [
+          90,
+          29.99999999999998,
+        ],
+        Array [
+          80.00000000000011,
+          49.99999999999998,
+        ],
+      ],
+    ],
+    "type": "Polygon",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;
+
+exports[`stackFeature polygon-realworld 1`] = `
+Object {
+  "geometry": Object {
+    "coordinates": Array [
+      Array [
+        Array [
+          70,
+          50,
+        ],
+        Array [
+          80,
+          40,
+        ],
+        Array [
+          60,
+          40,
+        ],
+        Array [
+          70,
+          50,
+        ],
+      ],
+    ],
+    "type": "Polygon",
+  },
+  "properties": Object {},
+  "type": "Feature",
+}
+`;

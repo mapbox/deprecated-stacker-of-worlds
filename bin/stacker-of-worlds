@@ -1,59 +1,37 @@
 #!/usr/bin/env node
-'use strict';
 /* eslint-disable no-console */
+'use strict';
 
 const meow = require('meow');
-const fs = require('fs');
-const getStdin = require('get-stdin');
-const stack = require('../lib/stack');
+const stackFile = require('../lib/stack-file');
 
 const help = `
   Usage
-    stacker-of-worlds <input> <output> <options>
+    stacker-of-worlds <infile> <options>
 
-    If no input is provided, stdin is used.
-    If no output is provided, stdout is used.
+    Prints a filepath to real-world features. If infile had no
+    unearthly longitudes, returns infile.
 
   Options
-    --pretty, -p    Write JSON with line breaks and indentation.
+    --outfile, -o   Filepath to which the transformed FeatureCollection
+                    will be written. Defaults to a tmp file.
 
   Examples
-    stacker-of-worlds ./foo.geojson ./stacked/stacked-foo.geojson --pretty
-    stacker-of-worlds ./foo.geojson > ./stacked/stacked-foo.geojson
-    cat ./foo.geojson | stacker-of-worlds --pretty | some-other-tool
+    stacker-of-worlds ./foo.geojson
+    stacker-of-worlds ./foo.geojson -o ./stacked/stacked-foo.geojson
   `;
 
 const cli = meow(help, {
   alias: {
-    p: 'pretty',
+    o: 'outfile',
   },
 });
 
-const inputFilepath = cli.input[0];
-const outputFilepath = cli.input[1];
+const infile = cli.input[0];
+const options = {
+  outfile: cli.flags.outfile,
+};
 
-if (inputFilepath) {
-  fs.readFile(inputFilepath, (err, data) => {
-    if (err) throw err;
-    writeOutput(stack(JSON.parse(data)));
-  });
-} else {
-  getStdin().then((data) => {
-    if (!data) throw new Error('No input provided');
-    writeOutput(stack(JSON.parse(data)));
-  }).catch((err) => {
-    console.error(err.stack);
-  });
-}
-
-function writeOutput(output) {
-  const outputString = (cli.flags.pretty)
-    ? JSON.stringify(output, null, 2)
-    : JSON.stringify(output);
-
-  if (outputFilepath) {
-    fs.writeFileSync(outputFilepath, outputString);
-  } else {
-    console.log(outputString);
-  }
-}
+stackFile(infile, options)
+  .then((filepath) => console.log(filepath))
+  .catch((err) => console.error(err.stack));
