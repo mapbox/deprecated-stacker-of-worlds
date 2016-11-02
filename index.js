@@ -1,7 +1,9 @@
 'use strict';
 
-const stack = require('./lib/stack');
+const stackFeature = require('./lib/stackFeature');
+const stackFile = require('./lib/stackFile');
 
 module.exports = {
-  stack,
+  stackFeature,
+  stackFile,
 };

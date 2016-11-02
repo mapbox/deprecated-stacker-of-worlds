@@ -1,3 +1,6 @@
 {
-  "extends": ["eslint-config-davidtheclark-node"]
+  "extends": ["eslint-config-davidtheclark-node"],
+  "env": {
+    "jest": true
+  }
 }
